@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>boolean</title>
+</head>
+<body>
+  <h1>objects</h1>
+  <script>
+   const product={
+         name:'basketball',
+         price:2095,
+         ['delivery-time']:'3 days'
+
+   }
+   console.log(product);
+    product.price=2595;
+   console.log(product.price);
+   console.log(product['delivery-time']);
+   const product1={
+         name:'football',
+         price:1890,
+   }
+   function comparePrice(product,product1){
+         if(product.price>product1.price){
+                  console.log(`football is good choice ${product1.price}`);
+         }
+         else{
+                  console.log(`basketball is good choice ${product.price}`);
+         }
+   }
+   comparePrice(product,product1);
+   let name='SANDESHlimbu';
+   let lowercaceName=name.toLowerCase();
+   console.log(lowercaceName);
+   const p1={
+         name:'apple',
+         price:100,
+
+   };
+   const p2={
+         name:'apple',
+         price:100,
+   };
+   function isSameproduct(p1,p2){
+         if(p1.name===p2.name && p1.price===p2.price){
+                  return true;
+         }
+         return false;
+   }
+   console.log(isSameproduct(p1,p2));
+   let text='test'.repeat(2);;
+   console.log(text);
+   // Save value
+localStorage.setItem("calculation", "2+2=4");
+
+// Get value
+let result = localStorage.getItem("calculation") || "No previous calculation";
+console.log(result);
+const score={
+         wins:0,
+         losses:0
+};
+
+
+
+  </script>
+</body>
+</html>

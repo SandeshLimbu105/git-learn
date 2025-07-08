@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>boolean</title>
+</head>
+<body>
+  <h1>objects</h1>
+  <script>
+   const person={
+         name:'sandesh',
+         age:22,
+         isStudent:true,
+         ['delivery-time']:'1 day',
+         college:{
+                  name:'texas intl',
+                  location:'chabhil'
+         },
+         cal: function(rate,cost){
+                  console.log(` total cost is ${rate*cost}`)
+         }
+         
+   };
+   console.log(person);
+   console.log(person.name);
+   console.log(person.age);
+   person.age=23;
+   console.log(person.age);
+   console.log(person['name']);
+   console.log(person['delivery-time']);
+   console.log(person.college.name);
+   console.log(person.cal(10,100));
+   console.log(person.cal(20,2000));
+   console.log(JSON.stringify(person));
+   const jsonString=JSON.stringify(person);
+   console.log(JSON.parse(jsonString));
+
+let hours = new Date().getHours();
+console.log(hours);
+
+
+  </script>
+</body>
+</html>

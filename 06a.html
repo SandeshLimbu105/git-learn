@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time</title>
+</head>
+<body>
+  <p>Time period</p>
+   <script>
+  let hours=new Date().getHours();
+  const name="sandesh";
+  if(hours==6 && hours <= 12){
+         console.log(`good morinig ${name}`);
+  }
+  else if (hours>12 && hours <18) {
+         console.log(`good afternoon ${name}`);
+  }
+  else {
+         console.log(`good night ${name}`);
+  }
+  let age=1;
+  const isHoliday=true;
+  if((age <=6||age>=65) && false){
+         console.log(`you qualigy for discoountd`);
+  }
+  else {
+         console.log(`you get no discount`);
+  }
+  //crete a random nuumber using math.randome() buit-in fuction
+
+let randomNumber=Math.random();
+let result='';
+let guess=0.5;
+if(randomNumber===guess){
+        result='you win';
+}
+else{
+         result='you lose';
+}
+alert(`the random number is ${randomNumber} and the result is ${result}`);
+  </script>
+</body>
+</html>
