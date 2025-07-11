@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dom excercise</title>
+</head>
+<body>
+  <button onclick="choose('heads')">head</button>
+  <button onclick="choose('tails')">tail</button>
+  <p class="result"></p>
+  <input placeholder="Enter your " class="js-name-input" onkeydown="
+  handleonkeydown(event);
+  ">
+ <button onclick="displayname()">submit</button>
+ <p class="name"></p>
+ 
+  <script>
+
+function choose(choice){
+ 
+         document.querySelector('.result').innerHTML=`you chose ${choice}`;
+ }
+function displayname(){
+const inputElement=document.querySelector('.js-name-input');
+let text=inputElement.value;
+document.querySelector('.name').innerHTML=`your name is: ${text}`;
+}
+function handleonkeydown(){
+         
+  if(event.key==='Enter'){
+         displayname();
+
+}
+}
+  </script>
+</body>
+</html>
