@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>todo list</title>
+</head>
+<body>
+         <h1>Practice session 11</h1>
+        
+  <script >
+//        const nums=[10,20,30];
+//        console.log(nums);
+//        nums[nums.length-1]=99;
+//        console.log(nums[2]);
+// const array=[1,20,22,24,5];
+// getLastValue(array);
+// function getLastValue(array){
+//          return array[array.lenth-1];
+
+// }s
+// 1c. arraySwap function
+    function arraySwap(array) {
+      if (array.length < 2) return array;
+      
+      const lastIndex = array.length - 1;
+      const temp = array[0];
+      array[0] = array[lastIndex];
+      array[lastIndex] = temp;
+      return array;
+    }
+    console.log("Swapped array:", arraySwap([1, 20, 22, 24, 5]));
+  </script>
+</body>
+</html>

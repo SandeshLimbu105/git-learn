@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>boolean</title>
+</head>
+<body>
+  <h1>New Notice</h1>
+  <input placeholder="input new notice" class="input-notice">
+  <button onclick="addnotice()">submit</button>
+  <div class="display-box"></div>
+  <p class="p-date"></p>
+  <script>
+        // It is notify to all students of class 11 and 12 .the mid term exam will be concucted form next sunday.
+        const notices=[];
+    function addnotice(){
+         const noticeElement=document.querySelector('.input-notice');
+         const newnotice=noticeElement.value.trim();
+         // document.querySelector('.display-box').innerHTML=`${newnotice}`;
+         // document.querySelector('.p-date').innerHTML=`${date}`;
+         if(newnotice===''){
+                  return(newnotice);
+         }
+         const date=new Date().toLocaleString();
+         notices.push({text:newnotice,time:date});
+         displayNotices();
+         noticeElement.value='';
+
+
+    }
+    function displayNotices(){
+         const box =document.querySelector('.display-box');
+         box.innerHtml='';
+         notices.forEach((notice,index)=>{
+                  box.innerHTML+= `
+                  <div class="notice">
+                           <strong>Notice  ${index+1}:</strong> ${notice.text}
+                           <div class="date">posted on: ${notice.time}</div>
+                           </div>
+                           `;
+         });
+    }
+  </script>
+</body>
+</html>
