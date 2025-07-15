@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App</title>
+</head>
+<body>
+  <h1>App</h1>
+  <script>
+         let showtitle=true;
+  setInterval(() => {
+        if(showtitle){
+         document.title="(2) New messages";
+        } 
+        else{
+         document.title="";
+        }
+        showtitle=!showtitle;
+         
+  },1000);
+  </script>
+</body>
+</html>

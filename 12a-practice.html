@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>boolean</title>
+</head>
+<body>
+  <h1>Advance function</h1>
+  <button class="btn" onclick="startTimer()">Start</button>
+  <button onclick="addfn()">Add to cart</button>
+  <p class="add"></p>
+  <script>
+  /* let add=function(){
+         console.log(2+3)
+   }
+   add();
+   add();
+   function multi(){
+      console.log(2*4);
+   }
+
+   function runtwice(fun){
+        fun();
+        fun();
+   };
+   runtwice(multi);*/
+   function startTimer(){
+         document.querySelector('.btn').innerHTML='loading...';
+   setTimeout(function(){
+         document.querySelector('.btn').innerHTML='Finished';
+   },1000);
+}
+function addfn(){
+       const btnElement=document.querySelector('.add');
+       btnElement.innerHTML='added';
+       setTimeout(function(){
+         btnElement.innerHTML='';
+       },2000);
+         
+}
+
+
+
+  </script>
+</body>
+</html>
