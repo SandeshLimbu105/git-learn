@@ -7,7 +7,8 @@ for (let i = 0; i < todolist.length; i++) {
   todolistHtml += html;
 }
 
-document.querySelector('.js-todo-list').innerHTML = todolistHtml;
+document.querySelector('.js-todo-list').innerHTML=todolistHtml;
+
 
 function addtodo() {
   const inputElement = document.querySelector('.js-name-input');
@@ -17,6 +18,15 @@ function addtodo() {
   inputElement.value = '';
 
   // Rebuild HTML with new item
+  let newHtml = '';
+  for (let i = 0; i < todolist.length; i++) {
+    const todo = todolist[i];
+    newHtml += `<p>${todo}</p>`;
+  }
+  document.querySelector('.js-todo-list').innerHTML = newHtml;
+}
+function remove(){
+  todolist.pop();
   let newHtml = '';
   for (let i = 0; i < todolist.length; i++) {
     const todo = todolist[i];
